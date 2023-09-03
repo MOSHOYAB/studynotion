@@ -231,9 +231,7 @@ export default function CourseInformationForm() {
           id="courseCategory"
           className="form-style w-full"
         >
-          <option value="" disabled>
-            Choose a Category
-          </option>
+          <option value="" disabled> Choose a Category</option>
           {!loading &&
             courseCategories?.map((category, indx) => (
               <option key={indx} value={category?._id}>
@@ -241,11 +239,12 @@ export default function CourseInformationForm() {
               </option>
             ))}
         </select>
-        {errors.courseCategory && (
+        
+        {/* {errors.courseCategory && (
           <span className="ml-2 text-xs tracking-wide text-pink-200">
             Course Category is required
           </span>
-        )}
+        )} */}
       </div>
       {/* Course Tags */}
       <ChipInput
